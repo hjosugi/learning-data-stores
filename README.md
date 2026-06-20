@@ -15,6 +15,21 @@ The rule is:
 - add server databases only when their real behavior matters
 - document when a lightweight substitute is acceptable and when it is misleading
 
+## What This Repo Teaches
+
+This repo is for choosing and understanding data stores by workload.
+
+Every example should identify:
+
+- write pattern
+- read/query pattern
+- indexing strategy
+- data volume assumption
+- local development setup
+- backup/export story
+- where the database is a good fit
+- where it becomes the wrong tool
+
 ## Learning Path
 
 1. SQL basics with H2 and SQLite-style embedded databases
@@ -61,6 +76,29 @@ Optional server experiments:
 
 - InfluxDB 3 Core for real time-series ingest/query behavior
 - Neo4j for production-style graph database behavior, Cypher tooling, vector indexes, and graph data science
+
+## Study Loop
+
+1. model the same small dataset in two stores
+2. write equivalent ingest and query examples
+3. measure readability before measuring speed
+4. document what each store makes easy
+5. document what each store hides or makes operationally expensive
+
+## What Belongs Elsewhere
+
+- app-specific persistence code belongs in `learning-backend-ddd`
+- retrieval application logic belongs in `learning-ai-python`
+- MQTT/device ingestion examples can start in `learning-embedded-iot` and land here when the storage comparison is the point
+- deployment and backup runbooks belong in `learning-platform-engineering`
+
+## First Milestones
+
+1. Add DuckDB analytics and time-series-shaped examples with generated data.
+2. Add H2 as a Java integration-test fixture.
+3. Add LanceDB and Chroma examples with the same toy document set.
+4. Add Kuzu first, then Neo4j, for graph comparison.
+5. Add InfluxDB 3 Core only where server time-series behavior matters.
 
 ## References
 
