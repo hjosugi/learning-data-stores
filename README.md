@@ -10,6 +10,7 @@ Start with a Dockerless SQLite workload lab before moving the same workload to D
 
 ```bash
 python3 projects/sqlite-workload-lab/app.py
+python3 projects/sqlite-workload-lab/test_app.py
 ```
 
 ## Why This Repo Exists

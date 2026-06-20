@@ -14,7 +14,12 @@ It models three workloads:
 python3 projects/sqlite-workload-lab/app.py
 ```
 
+## Unit Test
+
+```bash
+python3 projects/sqlite-workload-lab/test_app.py
+```
+
 ## Exercise
 
 Move one workload to DuckDB, Kuzu, or a vector database and document what became easier or harder.
-
