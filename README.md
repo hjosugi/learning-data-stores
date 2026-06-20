@@ -4,6 +4,14 @@ Relational, analytical, time-series, vector, graph, and embedded database experi
 
 Last verified: 2026-06-20
 
+## Runnable Starter Project
+
+Start with a Dockerless SQLite workload lab before moving the same workload to DuckDB, Kuzu, LanceDB, InfluxDB, or Neo4j:
+
+```bash
+python3 projects/sqlite-workload-lab/app.py
+```
+
 ## Why This Repo Exists
 
 Application repos should not become database catalogs. This repo keeps database experiments small, comparable, and runnable.
