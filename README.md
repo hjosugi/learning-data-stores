@@ -2,7 +2,15 @@
 
 Relational, analytical, time-series, vector, graph, and embedded database experiments for learning.
 
-Last verified: 2026-06-20
+Last verified: 2026-06-21
+
+## Development Environment
+
+If DuckDB or the Python DuckDB module is missing locally, enter the Nix shell:
+
+```bash
+nix develop
+```
 
 ## Runnable Starter Project
 
@@ -12,6 +20,26 @@ Start with a Dockerless SQLite workload lab before moving the same workload to D
 python3 projects/sqlite-workload-lab/app.py
 python3 projects/sqlite-workload-lab/test_app.py
 ```
+
+## Target Hands-On Projects
+
+DuckDB analytics:
+
+```bash
+python3 projects/duckdb-analytics-lab/check_duckdb.py
+uv run --with duckdb python projects/duckdb-analytics-lab/app.py
+```
+
+SQLite stays as the always-available baseline; DuckDB is the first named analytical database hands-on.
+
+Time-series, vector, and graph concepts without Docker:
+
+```bash
+python3 projects/multimodel-db-lab/app.py
+python3 projects/multimodel-db-lab/test_app.py
+```
+
+Use this before moving the same ideas to InfluxDB, LanceDB/Chroma, Kuzu, or Neo4j.
 
 ## Why This Repo Exists
 
